@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
 
- int binarysearch(long long int n) {
+ int sqrt(long long int n) {
 
         int start = 0;
         int end = n;
@@ -49,7 +49,7 @@ int main() {
     cout<<"Enter the number "<<endl;
     cin>>n;
 
-    int tempsol = binarysearch(n);
-    cout<<"The answer is "<<moreprecision(n, 3, tempsol)<<endl;
+    int tempsol = sqrt(n);
+    cout<<"Square root of "<<n<< " is "<<moreprecision(n, 3, tempsol)<<endl;
 
 }
