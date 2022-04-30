@@ -1,23 +1,37 @@
 #include<iostream>
 using namespace std;
 
-int fibonacii(int n) {
+int fibonacci(int n) {
     
-    int a=0;
+    int a = 0;
     int b = 1;
-    
-    cout<<a<<" "<<b<<endl;
+    int fib = 0;
 
-    for(int i = 0;i<=n;i++) {
-
-        int fib = a+b;
-        cout<<fib<<" "<<endl;
-
-        a=b;
-        b=fib;
-
+    if(n == 0) {
+        return 0;
+    }
+    if(n == 1) {
+        return 1;
     }
 
-    return fib;
+    for(int i = 2; i<=n; i++) {
 
+        fib = a + b;
+        
+        a = b;
+        b = fib;
+
+    }
+    return fib;
+}
+
+int main() {
+      
+    int n;
+    cout<<"Enter the number"<<endl;
+    cin>>n;
+
+    int ans = fibonacci(n);
+    cout<<n<<"th fibonacci number is "<<ans;
+   
 }
